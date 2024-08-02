@@ -257,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722539120772</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="update content">
+      <option name="closed" value="true" />
+      <created>1722539451021</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1722539451021</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
