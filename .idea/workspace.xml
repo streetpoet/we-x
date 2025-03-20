@@ -6,14 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c9bff4f1-93bf-4419-ac8d-b0c64b8642da" name="Changes" comment="update content">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/team/team-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/team/team-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/team/team-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/team/team-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/team/team-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/team/team-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/team/team-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/team/team-4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/team/team-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/team/team-5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/team/team-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/team/team-6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/team/team-7.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/team/team-7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/team/team-8.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/team/team-8.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,12 +22,12 @@
     &quot;assignee&quot;: &quot;streetpoet&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/streetpoet/we-x.git&quot;,
-    &quot;accountId&quot;: &quot;0051652b-b0bc-4884-aea5-c262ed2ebbc6&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/streetpoet/we-x.git",
+    "accountId": "f32b684f-0489-4180-a17a-a452c36f5ab7"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
