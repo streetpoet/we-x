@@ -22,68 +22,151 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
+
     <style>
-        @font-face {
-            font-family: 'Open Sans';
-            src: url('assets/fonts/OpenSans-Regular.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
+        /* --- 赛博朋克核心配色与基础设置 --- */
+        :root {
+            --cyber-black: #050505;
+            --cyber-dark-blue: #0a0a12;
+            --cyber-cyan: #03e9f4; /* 霓虹青 */
+            --cyber-magenta: #ff00ff; /* 霓虹粉 */
+            --cyber-yellow: #fdee06; /* 警告黄 */
+            --cyber-text: #e0e0e0;
+            --neon-glow: 0 0 10px rgba(3, 233, 244, 0.7), 0 0 20px rgba(3, 233, 244, 0.5);
         }
 
-        @font-face {
-            font-family: 'Open Sans';
-            src: url('assets/fonts/OpenSans-Regular.ttf') format('truetype');
+        body {
+            background-color: var(--cyber-black) !important;
+            color: var(--cyber-text) !important;
+            font-family: 'Orbitron', sans-serif; /* 建议在head引入Google Fonts */
+            overflow-x: hidden;
+            /* 添加扫描线效果 */
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 4px, 3px 100%;
+        }
+
+        /* --- 全局标题与文字效果 --- */
+        h1, h2, h3, h4, .sitename {
+            color: var(--cyber-cyan) !important;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: var(--neon-glow);
+        }
+
+        a {
+            color: var(--cyber-magenta) !important;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: varvar(--cyber-yellow) !important;
+            text-shadow: 0 0 8px var(--cyber-yellow);
+        }
+
+        /* --- 卡片与容器：切角效果 (Cybernetic Cut) --- */
+        .container, .footer-about, .footer-links {
+            background: rgba(10, 10, 18, 0.8) !important;
+            border: 1px solid var(--cyber-cyan);
+            clip-path: polygon(0% 0%, 95% 0%, 100% 5%, 100% 100%, 5% 100%, 0% 95%);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* --- 表单样式：霓虹发光边框 --- */
+        .form-control, input[type="email"], input[type="text"], textarea {
+            background: rgba(0, 0, 0, 0.7) !important;
+            border: 1px solid var(--cyber-magenta) !important;
+            color: var(--cyber-cyan) !important;
+            border-radius: 0 !important; /* 去掉圆角，追求硬朗感 */
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 15px var(--cyber-magenta) !important;
+            outline: none;
+        }
+
+        /* --- 按钮：高能警告样式 --- */
+        button[type="submit"], .newsletter-form input[type="submit"] {
+            background: transparent !important;
+            border: 2px solid var(--cyber-yellow) !important;
+            color: var(--cyber-yellow) !important;
+            text-transform: uppercase;
             font-weight: bold;
-            font-style: normal;
+            letter-spacing: 3px;
+            position: relative;
+            padding: 10px 25px !important;
+            transition: all 0.3s !important;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
         }
-        * {
-            font-family: 'Open Sans', sans-serif;
+
+        button[type="submit"]:hover {
+            background: var(--cyber-yellow) !important;
+            color: #000 !important;
+            box-shadow: 0 0 20px var(--cyber-yellow);
         }
-    .blockquote {
-      font-size: 1.3rem;
-      border: 1px solid rgba(222, 226, 230, 0.54);
-      border-left: 0.5rem solid rgba(0, 123, 255, 0.54);
-      color: #6c757d;
-      font-style: italic;
-      font-weight: bold;
-      line-height: 1.6;
-      margin: 1.875rem auto;
-      max-width: 100%;
-      padding: 4.6875rem 1.875rem 1.875rem 4.6875rem;
-      position: relative;
-      width: 100%;
-    }
-    .blockquote:before {
-      font-size: 6.875rem;
-      color: rgba(0, 123, 255, 0.54);
-      content: "“";
-      font-size: 5.5rem;
-      height: 3.75rem;
-      left: 0.9375rem;
-      line-height: 1;
-      max-width: 3.75rem;
-      position: absolute;
-      text-align: inherit;
-      top: 0.9375rem;
-      width: 100%;
-    }
-    .blockquote:after {
-      content: "";
-    }
-    .blockquote-footer {
-      font-size: 80%;
-      color: #343a40;
-      display: block;
-      font-style: normal;
-      font-weight: 700;
-      margin-top: 1rem;
-      padding: 0;
-    }
-    .blockquote-footer:before {
-      content: "— ";
-    }
+
+        /* --- 页脚特定样式 --- */
+        .footer {
+            background: var(--cyber-dark-blue) !important;
+            border-top: 3px solid var(--cyber-magenta);
+            position: relative;
+        }
+
+        .footer-newsletter {
+            padding: 40px 0;
+            background: repeating-linear-gradient(
+              45deg,
+              rgba(255, 0, 255, 0.03),
+              rgba(255, 0, 255, 0.03) 10px,
+              transparent 10px,
+              transparent 20px
+            );
+        }
+
+        /* --- 社交图标：发光效果 --- */
+        .social-links a {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(3, 233, 244, 0.1);
+            color: var(--cyber-cyan) !important;
+            border: 1px solid var(--cyber-cyan);
+            margin-right: 10px;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-links a:hover {
+            background: var(--cyber-cyan) !important;
+            color: #000 !important;
+            box-shadow: var(--neon-glow);
+        }
+
+        /* --- 装饰性：页脚顶部线条 --- */
+        .footer-top {
+            border-bottom: 1px solid rgba(3, 233, 244, 0.3);
+            padding-bottom: 40px;
+        }
+
+        /* 动画效果：轻微的呼吸感 */
+        @keyframes neonPulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .sitename {
+            animation: neonPulse 3s infinite ease-in-out;
+        }
     </style>
+
+    <!-- 为了达到最佳效果，建议在 <head> 中添加这个字体库 -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display：display=swap" rel="stylesheet">
+
+    
 </head>
 
 <body class="index-page">
@@ -835,7 +918,7 @@
                             <i class="bi bi-geo-alt flex-shrink-0"></i>
                             <div>
                                 <h3>Address</h3>
-                                <p>A108 Adam Street, New York, NY 535022</p>
+                                <p>X Street, Cedar Park, TX 78613</p>
                             </div>
                         </div><!-- End Info Item -->
 
@@ -843,7 +926,7 @@
                             <i class="bi bi-telephone flex-shrink-0"></i>
                             <div>
                                 <h3>Call Us</h3>
-                                <p>+1 5589 55488 55</p>
+                                <p>+1 737-610-0000</p>
                             </div>
                         </div><!-- End Info Item -->
 
